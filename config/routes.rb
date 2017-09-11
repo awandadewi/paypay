@@ -6,4 +6,6 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
 
+  resources :settings, only: [:new, :create]
+
 end

@@ -13,7 +13,7 @@
           </li>
           <% if current_user.membership.role == "admin" %>
             <li class="nav-item">
-              <%= link_to "Company setting", root_path, class: "nav-link" %>
+              <%= link_to "Company setting", new_setting_path, class: "nav-link" %>
             </li>
           <% end %>
 
