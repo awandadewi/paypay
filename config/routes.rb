@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   }
 
   resources :settings, only: [:new, :create]
+  resources :loans, only: [:new, :create]
 
 end

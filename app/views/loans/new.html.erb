@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>Apply loan in KoinWorks</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <% if current_user.company.kw_integrated? %>
+        <%= form_tag loans_path, method: :post do %>
+          <div class="form-group">
+            <label for="">Loan Amount</label>
+            <%= text_field_tag :amount, params[:amount], class: "form-control" %>
+          </div>
+
+          <div class="form-group text-left">
+            <label for="">Duration</label>
+            <select class="form-control" name="duration" id="duration">
+              <option value="6">6 Bulan</option>
+              <option value="12">12 Bulan</option>
+              <option value="24">24 Bulan</option>
+              <option value="26">36 Bulan</option>
+              <option value="48">48 Bulan</option>
+            </select>
+          </div>
+
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input">
+              I agree to term and condition provided by KoinWorks
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+
+        <% end %>
+      <% else %>
+        <div class="alert alert-danger">
+          Your company is not integrated with KoinWorks
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

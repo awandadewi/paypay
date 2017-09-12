@@ -11,7 +11,11 @@ class KoinWrapper
     end
 
     def apply_loan(attributes)
-
+      api_url = "#{self.new.current_endpoint}/loans/apply"
+      response = RestClient.post(api_url, attributes.merge(access_token: self.new.access_token))
+      return true
+    rescue
+      return false
     end
 
     # Give user email
