@@ -34,7 +34,7 @@ class KoinWrapper
   # ==============================================================================
   def current_endpoint
     if Rails.env.production?
-      "http://koinworks.com/api/v1"
+      "https://kwoauth.herokuapp.com/api/v1"
     else
       "http://localhost:3000/api/v1"
     end
