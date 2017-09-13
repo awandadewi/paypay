@@ -42,7 +42,7 @@ class KoinWrapper
 
   def access_token
     if Rails.env.production?
-      "96b364062e51af18e1ff32b50121201358424a44682ee80fd36c706e533ef2e2"
+      "7c636d40bb8de1f0af438bb006c6630e37c30c04fcb728d09846fab957b3b7c4"
     else
       "e1f34bea59f17d6afce5cc1421b04ef89092f1a8606d58ed9792294aa23810a5"
     end
