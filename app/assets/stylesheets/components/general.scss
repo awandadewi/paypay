@@ -4,6 +4,7 @@ body {
   transition: all .5s;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-
+  background-color: lighten(#F2F4F7, 3%);
   .form-control { border-radius: 3px; }
+  .btn-link { min-width: auto; }
 }

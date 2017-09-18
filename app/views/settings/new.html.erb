@@ -1,14 +1,20 @@
+<!-- Integration pages -->
 <div class="row flex-xl-nowrap">
   <%= render 'shared/sidebar' %>
   <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 bd-content">
-    <h3>Register your company to KoinWorks</h3>
-    <div class="row">
-      <div class="col-md-4">
-        <% if current_user.company.kw_integrated? %>
-          <div class="alert alert-success">
-            Your company already integrated with koinworks
+      <% if current_user.company.kw_integrated? %>
+        <div class="kw-integration--done">
+          <div class="kw-integration--done-content">
+            <%= fa_icon "check-circle 5x", class: "text-success mb-3" %>
+            <h4 class="my-2">Congratulations</h4>
+            <p>Your company already integrated with koinworks</p>
+            <%= image_tag 'koinworks-logo.png', alt: 'Bro', class:"img-fluid my-4", size: "250" %>
           </div>
-        <% else %>
+        </div>
+      <% else %>
+        <div class="row">
+          <div class="col-md-4">
+          <h3>Register your company to KoinWorks</h3>
           <%= form_tag settings_path, method: :post do %>
             <div class="form-group">
               <label for="">Company Name</label>

@@ -1,5 +1,5 @@
-// Home
-.kw-home {
+// Login
+.kw-login {
   &--blank {
     display: table;
     width: 100%;
@@ -9,6 +9,12 @@
   &--blank-content {
     display: table-cell;
     vertical-align: middle;
-    text-align: center;
+  }
+
+  &--blank-box {
+    background-color: $white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 3px;
   }
 }

@@ -1,10 +1,27 @@
-<div class="row flex-xl-nowrap">
-  <%= render 'shared/sidebar' %>
-  <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 bd-content">
-    <h3>Dashboard</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptatem, voluptate molestiae consectetur, doloribus dolorem facilis provident consequuntur cum ad quam necessitatibus est nobis alias sapiente sint voluptatum illo sequi.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugiat in dicta, minima saepe quis culpa, voluptas commodi molestiae labore nostrum eius. Nam quibusdam a dolores deserunt sit quidem autem.
-    </p>
+<% if user_signed_in? %>
+  <div class="row flex-xl-nowrap">
+    <%= render 'shared/sidebar' %>
+    <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 bd-content">
+      <h3>Dashboard</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptatem, voluptate molestiae consectetur, doloribus dolorem facilis provident consequuntur cum ad quam necessitatibus est nobis alias sapiente sint voluptatum illo sequi.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugiat in dicta, minima saepe quis culpa, voluptas commodi molestiae labore nostrum eius. Nam quibusdam a dolores deserunt sit quidem autem.
+      </p>
+    </div>
   </div>
-</div>
+<% else %>
+  <div class="kw-home">
+    <div class="row justify-content-center">
+      <div class="kw-home--blank col-sm-12 col-md-6">
+        <div class="kw-home--blank-content">
+          <%= fa_icon "sign-in 5x", class: "text-warning mb-3" %>
+          <h4 class="my-2">Ups! You're not login</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptatem, voluptate molestiae consectetur, doloribus dolorem facilis provident consequuntur cum ad quam necessitatibus est nobis alias sapiente sint voluptatum illo sequi.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugiat in dicta, minima saepe quis culpa, voluptas commodi molestiae labore nostrum eius. Nam quibusdam a dolores deserunt sit quidem autem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

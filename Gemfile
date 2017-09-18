@@ -25,6 +25,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use Popper for popover and tooltip bootstrap 4 beta
 gem 'popper_js', '~> 1.12.3'
+# Fontawesome
+gem 'font-awesome-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
