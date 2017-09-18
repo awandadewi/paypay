@@ -1,0 +1,11 @@
+.kw-sidebar {
+  background-color: #f2f2f2;
+  border-right: 1px solid #000;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  min-height: calc(100vh - 4rem);
+  top: 4rem;
+}
