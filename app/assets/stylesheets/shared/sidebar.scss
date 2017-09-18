@@ -1,6 +1,5 @@
 .kw-sidebar {
-  background-color: #f2f2f2;
-  border-right: 1px solid #000;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
   position: -webkit-sticky;
   position: -moz-sticky;
   position: -ms-sticky;
@@ -8,4 +7,19 @@
   position: sticky;
   min-height: calc(100vh - 4rem);
   top: 4rem;
+
+  &__menus { }
+
+  &__links {
+    display: block;
+    padding: 0.3rem 0;
+    color: rgba(0, 0, 0, 0.5);
+
+    &:hover, &:focus, &:active {
+      color: rgba(0, 0, 0, 0.7);
+      text-decoration: none;
+    }
+
+    &.kw-active { color: rgba(0, 0, 0, 1); }
+  }
 }

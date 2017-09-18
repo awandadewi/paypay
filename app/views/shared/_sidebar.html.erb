@@ -1,4 +1,14 @@
-<div class="col-12 col-md-3 col-xl-2 kw-sidebar">
-  <h1>Sidebar</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus corporis harum explicabo dignissimos at rem, delectus, nobis nesciunt quasi quibusdam esse sit, aperiam fuga, illo molestias corrupti recusandae ratione! Eius.</p>
+<div class="col-12 col-md-3 col-xl-2 kw-sidebar py-md-4 px-md-3">
+  <nav class="kw-sidebar__menus">
+    <%= link_to "Dashboard", root_path, class: "kw-sidebar__links kw-active" %>
+    <% if user_signed_in? && current_user.membership.role == "admin" %>
+      <%= link_to "Integration", new_setting_path, class: "kw-sidebar__links" %>
+    <% end %>
+    <% if user_signed_in? && current_user.membership.role == "employee" %>
+      <%= link_to "Apply loan", new_loan_path, class: "kw-sidebar__links" %>
+    <% end %>
+    <%= link_to "Broadcast", root_path, class: "kw-sidebar__links" %>
+    <%= link_to "Employee loan", root_path, class: "kw-sidebar__links" %>
+    <%= link_to "Settings", root_path, class: "kw-sidebar__links" %>
+  </nav>
 </div>

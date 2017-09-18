@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  font-size: 1rem;
+  transition: all .5s;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  .form-control { border-radius: 3px; }
+}

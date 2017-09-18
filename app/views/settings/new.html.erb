@@ -1,4 +1,60 @@
-<div class="container">
+<div class="row flex-xl-nowrap">
+  <%= render 'shared/sidebar' %>
+  <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 bd-content">
+    <h3>Register your company to KoinWorks</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <% if current_user.company.kw_integrated? %>
+          <div class="alert alert-success">
+            Your company already integrated with koinworks
+          </div>
+        <% else %>
+          <%= form_tag settings_path, method: :post do %>
+            <div class="form-group">
+              <label for="">Company Name</label>
+              <%= text_field_tag :company_name, params[:company_name], class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <label for="">PIC Name</label>
+              <%= text_field_tag :pic_name, params[:pic_name], class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <label for="">Position in Company</label>
+              <%= text_field_tag :position, params[:position], class: "form-control" %>
+            </div>
+
+            <div class="form-group">
+              <label for="">Phone Number</label>
+              <%= text_field_tag :phone_number, params[:phone_number], class: "form-control" %>
+            </div>
+
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                I am authorize by the company to accept the rule
+              </label>
+            </div>
+
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                I agree to term and condition provided by KoinWorks
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="container">
   <h1>Register your company to KoinWorks</h1>
   <div class="row">
     <div class="col-md-4">
@@ -48,4 +104,4 @@
       <% end %>
     </div>
   </div>
-</div>
+</div> -->
