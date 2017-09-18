@@ -1,5 +1,5 @@
 <!--  Navbar header -->
-<nav class="navbar navbar-light kw-header">
+<nav class="navbar navbar-expand navbar-light flex-column flex-md-row kw-header justify-content-between">
     <%= link_to "Paypay", root_path, class: "navbar-brand" %>
     <div class="">
       <ul class="navbar-nav mr-auto">
@@ -7,13 +7,6 @@
           <li class="nav-item">
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
-        <% end %>
-      </ul>
-      <ul class="navbar-nav">
-        <% if user_signed_in? %>
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          </form>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Account

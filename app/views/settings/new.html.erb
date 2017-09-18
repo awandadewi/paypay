@@ -12,9 +12,9 @@
           </div>
         </div>
       <% else %>
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-md-4">
-          <h3>Register your company to KoinWorks</h3>
+          <h4 class="my-4">Register your company to KoinWorks</h4>
           <%= form_tag settings_path, method: :post do %>
             <div class="form-group">
               <label for="">Company Name</label>
@@ -50,7 +50,7 @@
               </label>
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary my-4">Submit</button>
 
           <% end %>
         <% end %>
