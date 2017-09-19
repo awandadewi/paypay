@@ -1,7 +1,8 @@
-<div class="container">
-  <h1>Apply loan in KoinWorks</h1>
-  <div class="row">
-    <div class="col-md-4">
+<% if user_signed_in? %>
+  <div class="row flex-xl-nowrap">
+    <%= render 'shared/sidebar' %>
+    <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 kw-home--content">
+      <!-- <h3 class="mb-5">Apply loan in KoinWorks</h3> -->
       <% if current_user.company.kw_integrated? %>
         <%= form_tag loans_path, method: :post do %>
           <div class="form-group">
@@ -26,15 +27,18 @@
               I agree to term and condition provided by KoinWorks
             </label>
           </div>
-
           <button type="submit" class="btn btn-primary">Submit</button>
-
         <% end %>
       <% else %>
-        <div class="alert alert-danger">
-          Your company is not integrated with KoinWorks
+        <div class="kw-integration--done">
+          <div class="kw-integration--done-content">
+            <%= fa_icon "times-circle 5x", class: "text-danger mb-3" %>
+            <h4 class="my-2">Sorry</h4>
+            <p>Your company is not integrated with KoinWorks</p>
+            <%= image_tag 'koinworks-logo.png', alt: 'Bro', class:"img-fluid my-4", size: "250" %>
+          </div>
         </div>
       <% end %>
     </div>
   </div>
-</div>
+<% end %>

@@ -1,9 +1,10 @@
 <% if user_signed_in? %>
   <div class="row flex-xl-nowrap">
     <%= render 'shared/sidebar' %>
-    <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 kw-home--content">
-      <h3 class="mb-5">Employee loan</h3>
-      <table class="table table-bordered table-responsive">
+    <% if user_signed_in? && current_user.membership.role == "admin" %>
+      <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 kw-home--content">
+        <h3 class="mb-5">Employee loan</h3>
+        <table class="table table-bordered table-responsive">
         <thead>
           <tr>
             <th>No</th>
@@ -49,7 +50,35 @@
           </tr>
         </tbody>
       </table>
-    </div>
+      </div>
+    <% end %>
+    <% if user_signed_in? && current_user.membership.role == "employee" %>
+      <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 kw-home--content">
+        <h3 class="mb-5">My loan</h3>
+        <table class="table table-bordered table-responsive">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Name</th>
+              <th>NIK</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th class="text-center">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Eky Fauzi</td>
+              <td>098555333222</td>
+              <td>IDR 5.000.000</td>
+              <td>Review</td>
+              <td class="text-center"><a href="javacsript:void(0);" class="btn btn-secondary">See details</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
   </div>
 <% else %>
   <div class="kw-home">
