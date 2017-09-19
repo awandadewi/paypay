@@ -54,7 +54,8 @@
     <% end %>
     <% if user_signed_in? && current_user.membership.role == "employee" %>
       <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 kw-home--content">
-        <h3 class="mb-5">My loan</h3>
+        <h3 class="mb-4">My loan</h3>
+        <%= link_to "Apply loan", new_loan_path, class: "btn btn-primary mb-5" %>
         <table class="table table-bordered table-responsive">
           <thead>
             <tr>

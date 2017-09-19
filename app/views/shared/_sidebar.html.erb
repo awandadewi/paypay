@@ -4,8 +4,5 @@
     <% if user_signed_in? && current_user.membership.role == "admin" %>
       <%= link_to "Integration", new_setting_path, class: "kw-sidebar__links" %>
     <% end %>
-    <% if user_signed_in? && current_user.membership.role == "employee" %>
-      <%= link_to "Apply loan", new_loan_path, class: "kw-sidebar__links" %>
-    <% end %>
   </nav>
 </div>
