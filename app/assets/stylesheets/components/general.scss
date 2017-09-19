@@ -8,3 +8,11 @@ body {
   .form-control { border-radius: 3px; }
   .btn-link { min-width: auto; }
 }
+
+.kw-alert {
+  position: fixed;
+  top: 6px;
+  text-align: center;
+  z-index: 2;
+  left: 45%;
+}

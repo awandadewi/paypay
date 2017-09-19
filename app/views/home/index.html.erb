@@ -1,12 +1,54 @@
 <% if user_signed_in? %>
   <div class="row flex-xl-nowrap">
     <%= render 'shared/sidebar' %>
-    <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 bd-content">
-      <h3>Dashboard</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptatem, voluptate molestiae consectetur, doloribus dolorem facilis provident consequuntur cum ad quam necessitatibus est nobis alias sapiente sint voluptatum illo sequi.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum fugiat in dicta, minima saepe quis culpa, voluptas commodi molestiae labore nostrum eius. Nam quibusdam a dolores deserunt sit quidem autem.
-      </p>
+    <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 kw-home--content">
+      <h3 class="mb-5">Employee loan</h3>
+      <table class="table table-bordered table-responsive">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>NIK</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th class="text-center">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Eky Fauzi</td>
+            <td>098555333222</td>
+            <td>IDR 5.000.000</td>
+            <td>Review</td>
+            <td class="text-center"><a href="javacsript:void(0);" class="btn btn-secondary">See details</a></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Willy</td>
+            <td>098555333223</td>
+            <td>IDR 15.000.000</td>
+            <td>0/12</td>
+            <td class="text-center"><a href="javacsript:void(0);" class="btn btn-secondary">See details</a></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Faisal</td>
+            <td>098555333224</td>
+            <td>IDR 4.000.000</td>
+            <td>Funding</td>
+            <td class="text-center"><a href="javacsript:void(0);" class="btn btn-secondary">See details</a></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Fajar</td>
+            <td>098555333225</td>
+            <td>IDR 10.000.000</td>
+            <td>Reject</td>
+            <td class="text-center"><a href="javacsript:void(0);" class="btn btn-secondary">See details</a></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 <% else %>

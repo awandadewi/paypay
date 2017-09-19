@@ -11,4 +11,10 @@
     vertical-align: middle;
     text-align: center;
   }
+
+  &--content {
+    @media (max-width: 768px) {
+      margin-top: 5rem;
+    }
+  }
 }

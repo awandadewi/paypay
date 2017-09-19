@@ -14,7 +14,7 @@
       <% else %>
         <div class="row justify-content-center">
           <div class="col-md-4">
-          <h4 class="my-4">Register your company to KoinWorks</h4>
+          <h4 class="my-4 mb-5">Register your company to KoinWorks</h4>
           <%= form_tag settings_path, method: :post do %>
             <div class="form-group">
               <label for="">Company Name</label>
@@ -33,7 +33,7 @@
 
             <div class="form-group">
               <label for="">Phone Number</label>
-              <%= text_field_tag :phone_number, params[:phone_number], class: "form-control" %>
+              <%= text_field_tag :phone_number, params[:phone_number], class: "form-control kw-only-number" %>
             </div>
 
             <div class="form-check">
@@ -59,55 +59,21 @@
   </div>
 </div>
 
+<script type="text/javascript">
 
-<!-- <div class="container">
-  <h1>Register your company to KoinWorks</h1>
-  <div class="row">
-    <div class="col-md-4">
-      <% if current_user.company.kw_integrated? %>
-        <div class="alert alert-success">
-          Your company already integrated with koinworks
-        </div>
-      <% else %>
-        <%= form_tag settings_path, method: :post do %>
-          <div class="form-group">
-            <label for="">Company Name</label>
-            <%= text_field_tag :company_name, params[:company_name], class: "form-control" %>
-          </div>
+  $(document).ready(function(){
+    $('.kw-only-number').keypress(validateNumber);
+  });
 
-          <div class="form-group">
-            <label for="">PIC Name</label>
-            <%= text_field_tag :pic_name, params[:pic_name], class: "form-control" %>
-          </div>
+  function validateNumber(event) {
+      var key = window.event ? event.keyCode : event.which;
+      if (event.keyCode === 8 || event.keyCode === 46) {
+          return true;
+      } else if ( key < 48 || key > 57 ) {
+          return false;
+      } else {
+        return true;
+      }
+  };
 
-          <div class="form-group">
-            <label for="">Position in Company</label>
-            <%= text_field_tag :position, params[:position], class: "form-control" %>
-          </div>
-
-          <div class="form-group">
-            <label for="">Phone Number</label>
-            <%= text_field_tag :phone_number, params[:phone_number], class: "form-control" %>
-          </div>
-
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input">
-              I am authorize by the company to accept the rule
-            </label>
-          </div>
-
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="checkbox" class="form-check-input">
-              I agree to term and condition provided by KoinWorks
-            </label>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Submit</button>
-
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-</div> -->
+</script>
