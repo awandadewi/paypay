@@ -44,7 +44,7 @@ class KoinWrapper
     if Rails.env.production?
       "7c636d40bb8de1f0af438bb006c6630e37c30c04fcb728d09846fab957b3b7c4"
     else
-      "48cf2029509a7510365e22b47e3858b456cd22b1876374da8ea06d0016c45eae"
+      "a733a648b21dda888a967c16582df580f98dc03f3b6e9dbf34e1107364b766c4"
     end
   end
 
