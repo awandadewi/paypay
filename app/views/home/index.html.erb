@@ -4,6 +4,17 @@
     <% if user_signed_in? && current_user.membership.role == "admin" %>
       <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 kw-home--content">
         <h3 class="mb-5">Employee loan</h3>
+
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Total Monthly Payment</h4>
+            <p class="card-text">Rp. 8.500.000,-</p>
+            <p class="card-text">Next payment 5 November 2017</p>
+          </div>
+        </div>
+
+        <br>
+
         <table class="table table-bordered table-responsive">
         <thead>
           <tr>
@@ -52,6 +63,7 @@
       </table>
       </div>
     <% end %>
+    
     <% if user_signed_in? && current_user.membership.role == "employee" %>
       <div class="col-12 col-md-9 col-xl-10 py-md-5 px-md-5 kw-home--content">
         <h3 class="mb-4">My loan</h3>
